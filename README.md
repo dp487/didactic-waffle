@@ -1,40 +1,158 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# didactic-waffle
 
-## Getting Started
+A sleek, modern **Next.js TODO application** built with the App Router. This project demonstrates a clean, functional UI with smooth interactions, localStorage persistence, and a minimalist design. Perfect for showcasing Next.js 13+ App Router patterns and React state management.
 
-First, run the development server:
+## 🎯 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Add Tasks**: Create new TODO items with UUID-based IDs
+- **Mark Complete**: Toggle task completion status with visual feedback
+- **Edit Tasks**: Inline editing to modify task descriptions
+- **Delete Tasks**: Remove completed or active tasks
+- **Persistent Storage**: All tasks saved to localStorage automatically
+- **Progress Tracking**: Hero component shows completion statistics
+- **Responsive Design**: Mobile-first, scales beautifully to desktop
+- **Smooth Animations**: Clean, intuitive interactions throughout
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 13+ (App Router)
+- **Language:** React 18+
+- **Styling:** Tailwind CSS
+- **State Management:** React Hooks (useState, useEffect, useReducer)
+- **Storage:** localStorage for persistence
+- **Build:** Vite-like development experience with Next.js
+
+## 📁 Project Structure
+
+```
+didactic-waffle/
+├── src/
+│   ├── app/
+│   │   ├── layout.js            # Root layout with metadata
+│   │   └── page.js              # Main TODO page
+│   ├── components/
+│   │   ├── Header.jsx           # Top navigation/header
+│   │   ├── TODOHero.jsx         # Progress tracking hero
+│   │   ├── Form.jsx             # Add new task form
+│   │   └── TODOList.jsx         # Task list rendering
+│   ├── public/                  # Static assets
+│   │   └── images/              # Images, icons, etc.
+│   ├── jsconfig.json            # JavaScript config
+│   └── next.config.mjs          # Next.js config
+├── package.json                 # npm dependencies
+├── package-lock.json            # Dependency lock file
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Prerequisites
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Node.js 18+
+- npm or yarn
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+# Clone the repository
+git clone <repository-url>
+cd didactic-waffle
 
-## Learn More
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Start development server
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+# Development
+npm run dev
 
-## Deploy on Vercel
+# Production build
+npm run build
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### API Routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js App Router supports API routes in `src/app/api/`:
+
+```bash
+# Example API endpoint
+curl http://localhost:3000/api/hello
+```
+
+## 📖 Usage
+
+1. **Start the dev server:**
+   ```bash
+   npm run dev
+   ```
+
+2. **Open in browser:**
+   ```bash
+   # macOS
+   open http://localhost:3000
+
+   # Windows
+   start http://localhost:3000
+
+   # Linux
+   xdg-open http://localhost:3000
+   ```
+
+## 🎨 Customization
+
+### Styling
+
+Edit Tailwind classes in components to customize:
+- Color schemes
+- Typography
+- Spacing
+- Animations
+
+### Functionality
+
+Extend with:
+- Priority levels
+- Due dates
+- Categories/tags
+- Drag-and-drop reordering
+- Dark mode toggle
+- Export/import (JSON)
+
+### Data Storage
+
+Replace localStorage with:
+- API backend (Express/FastAPI)
+- Database (MongoDB/PostgreSQL)
+- Server-side state management
+
+## 🧪 Future Work
+
+- Add authentication (JWT/NextAuth)
+- Add backend API integration
+- Add drag-and-drop reordering
+- Add dark mode toggle
+- Add keyboard shortcuts
+- Add notifications (Toast messages)
+- Add export/import functionality
+- Add file attachments
+- Add collaboration features (Real-time with Socket.io)
+
+## 🖼️ Demo
+
+The app features:
+- Clean, minimalist design
+- Smooth, intuitive interactions
+- Responsive layout (mobile to desktop)
+- Progress tracking with completion stats
+- In-place editing for quick updates
+- Persistent storage across sessions
+
+## 📄 License
+
+MIT
